@@ -42,7 +42,7 @@ const AdminPanel = () => {
     const unsubscribe = async () => {
       const result = await axios({
         method: "get",
-        url: "https://pepper-api/admin/details.onrender.com",
+        url: "https://pepper-api.onrender.com/admin/details",
         headers: {
           Accept: "application/json, form-data",
         },
@@ -66,7 +66,7 @@ const AdminPanel = () => {
 
         const response = await axios({
           method: "put",
-          url: "https://pepper-api/admin/file/upload.onrender.com",
+          url: "https://pepper-api.onrender.com/admin/file/upload",
           headers: { "Content-Type": "multipart/form-data" },
           data: data
         });
@@ -111,7 +111,7 @@ const AdminPanel = () => {
       data.append("image", post.image);
       const result = await axios({
         method: "put",
-        url: "https://pepper-api/admin/update.onrender.com",
+        url: "https://pepper-api.onrender.com/admin/update",
         headers: {
         Accept: "application/json, form-data"
       },
